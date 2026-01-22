@@ -6,8 +6,7 @@ export function devTooltipBuild(prefix = "debug_") {
     transform(code, id) {
       if (!/\.(jsx|tsx)$/.test(id)) return code;
 
-      // detect production mode safely
-      const isProd = process.env.NODE_ENV === "production" || process.env.MODE === "production";
+      const isProd = process.env.MODE === "production" || process.env.NODE_ENV === "production";
       if (!isProd) return code;
 
       const regex = new RegExp(`\\s${prefix}[a-zA-Z0-9_-]+=(?:"[^"]*"|'[^']*')`, "g");
