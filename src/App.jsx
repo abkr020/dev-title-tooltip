@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <div
-        title="actual"
-        debug_title="Users table">
+        title="actual title"
+        debug_title="Users table debug">
         hi1234
       </div>
     </>
