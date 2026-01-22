@@ -1,0 +1,19 @@
+{
+  "name": "dev-tooltip",
+  "version": "1.0.0",
+  "description": "Dev-only tooltips using debug_* attributes, stripped from production builds",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "keywords": [
+    "vite",
+    "debug",
+    "tooltip",
+    "react",
+    "devtools"
+  ],
+  "author": "Abhishek Kumar",
+  "license": "MIT"
+}
