@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div
-        title="database table name users"
+        title="actual"
         debug_title="Users table">
         hi1234
       </div>

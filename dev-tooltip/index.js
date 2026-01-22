@@ -5,9 +5,13 @@ export function devTooltip(options = {}) {
     return {
         name: "dev-tooltip",
 
+        // configResolved(config) {
+        //     this.isProd = config.mode === "production"; // Save the mode in plugin context
+        // },
         configResolved(config) {
-            this.isProd = config.mode === "production"; // Save the mode in plugin context
+            this.isProd = config.mode === "production"; // correct way
         },
+
 
 
         // 🟢 DEV: Inject tooltip runtime automatically
@@ -105,16 +109,18 @@ export function devTooltip(options = {}) {
 
 
 
-         // BUILD: Strip debug_* attributes
-    transform(code, id) {
-      if (!/\.(jsx|tsx)$/.test(id)) return code;
+        // BUILD: Strip debug_* attributes
+        transform(code, id) {
+            if (!/\.(jsx|tsx)$/.test(id)) return code;
 
-      if (!this.isProd) return code; // ✅ only strip in production
-
-      // remove debug_* attributes (single or double quotes)
-      const regex = new RegExp(`\\s${prefix}[a-zA-Z0-9_-]+=(?:"[^"]*"|'[^']*')`, "g");
-      return code.replace(regex, "");
-    },
+            if (!this.isProd) return code; // ✅ only strip in production
+            if (true) {
+                console.log('here')
+            }
+            // remove debug_* attributes (single or double quotes)
+            const regex = new RegExp(`\\s${prefix}[a-zA-Z0-9_-]+=(?:"[^"]*"|'[^']*')`, "g");
+            return code.replace(regex, "");
+        },
 
 
 
