@@ -1,12 +1,25 @@
 {
   "name": "dev-tooltip",
-  "version": "1.0.0",
+  "version": "1.1.4",
   "description": "Dev-only tooltips using debug_* attributes, stripped from production builds",
   "type": "module",
   "main": "index.js",
   "exports": {
     ".": "./index.js"
   },
+  "files": [
+    "index.js",
+    "dev-tooltip-dev.js",
+    "dev-tooltip-build.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abkr020/dev-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abkr020/dev-tooltip/issues"
+  },
+  "homepage": "https://github.com/abkr020/dev-tooltip#readme",
   "keywords": [
     "vite",
     "debug",
